@@ -1,0 +1,13 @@
+GreedyActivitySelection(activities):
+Sort activities by finish times in ascending order
+
+    selectedActivities = [first activity]  // Add the first activity as selected
+    lastSelected = 0  // Index of the last selected activity
+
+    for i from 1 to activities.length - 1:
+        if activities[i].start > activities[lastSelected].finish:
+            // If the start time of the current activity is after or equal to the finish time of the last selected activity
+            Add activities[i] to selectedActivities
+            lastSelected = i  // Update lastSelected index
+
+    return selectedActivities

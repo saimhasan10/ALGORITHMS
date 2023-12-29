@@ -1,0 +1,19 @@
+FractionalKnapsack(capacity, values[], weights[], n):
+    for i from 0 to n-1:
+        calculate valuePerWeight[i] = values[i] / weights[i]
+
+    sort items by valuePerWeight in non-increasing order
+
+    totalValue = 0.0
+    remainingCapacity = capacity
+
+    for i from 0 to n-1:
+        if remainingCapacity >= weights[i]:
+            totalValue += values[i]
+            remainingCapacity -= weights[i]
+        else:
+            fraction = remainingCapacity / weights[i]
+            totalValue += fraction * values[i]
+            break
+
+    return totalValue
