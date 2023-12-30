@@ -6,7 +6,7 @@ Sort activities by finish times in ascending order
 
     for i from 1 to activities.length - 1:
         if activities[i].start > activities[lastSelected].finish:
-            // If the start time of the current activity is after or equal to the finish time of the last selected activity
+            // If the start time of the current activity is after  to the finish time of the last selected activity
             Add activities[i] to selectedActivities
             lastSelected = i  // Update lastSelected index
 
